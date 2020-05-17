@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CatalogoVOD>
+	<cuenta>
+		<correo>afb16031999@gmail.com</correo>
+		<perfiles>
+			<perfil>
+				<usuario>Perfil1</usuario>
+				<idioma>Español</idioma>
+			</perfil>
+			<perfil>
+				<usuario>Perfil2</usuario>
+				<idioma>Inglés</idioma>
+			</perfil>
+		</perfiles>
+		
+	</cuenta>
+	<contenido>
+		<peliculas>
+			<genero>
+				<nombre>Romance</nombre>
+				<titulo>A todos los chicos de los que me enamoré</titulo>
+				<titulo>Titanic</titulo>
+				<titulo>La novia perfecta</titulo>
+				<titulo>Señales de amor</titulo>
+			</genero>
+			<genero>
+				<nombre>Comedia</nombre>
+				<titulo>Una esposa de mentiras</titulo>
+				<titulo>Como si fuera la primera vez</titulo>
+				<titulo>Un papá genial</titulo>
+				<titulo>Jack y Jill</titulo>
+			</genero>
+		</peliculas>
+		<programas>
+			<genero>
+				<nombre>Documentales</nombre>
+				<titulo>Destruido en segundos</titulo>
+				<titulo>El poder de la mente</titulo>
+				<titulo>Sala de emergencias</titulo>
+				<titulo>Cámara lenta</titulo>
+			</genero>
+			<genero>
+				<nombre>Infantiles</nombre>
+				<titulo>Bob Esponja</titulo>
+				<titulo>Los jóvenes titanes</titulo>
+				<titulo>Mickey Mouse</titulo>
+				<titulo>Pocoyo</titulo>
+			</genero>
+		</programas>
+	</contenido>
+</CatalogoVOD>

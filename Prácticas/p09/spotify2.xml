@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="spotify2.xsd" version="1.0">
+     <Cuenta id="1" plan="free" fechaIni="2018-02-02" fechaFin="2019-01-01" planType="Premium">
+          <Nombre></Nombre>
+          <Correo emailType="afb@gmail.com"></Correo>
+          <Telefono tipo="movil" telType="12 34 56 78 91 34 37 36 19 01"></Telefono>
+     </Cuenta>
+</Spotify>

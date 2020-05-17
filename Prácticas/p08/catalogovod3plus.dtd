@@ -1,0 +1,47 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT CatalogoVOD (cuenta,contenido)>
+<!ATTLIST CatalogoVOD
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT cuenta (perfiles)>
+<!ATTLIST cuenta
+    xmlns CDATA #FIXED ''
+    correo CDATA #REQUIRED>
+
+<!ELEMENT contenido (peliculas,programas)>
+<!ATTLIST contenido
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT perfiles (perfil)+>
+<!ATTLIST perfiles
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT peliculas (genero)+>
+<!ATTLIST peliculas
+    xmlns CDATA #FIXED ''
+    region NMTOKEN #REQUIRED>
+
+<!ELEMENT programas (genero)+>
+<!ATTLIST programas
+    xmlns CDATA #FIXED ''
+    region NMTOKEN #REQUIRED>
+
+<!ELEMENT perfil EMPTY>
+<!ATTLIST perfil
+    xmlns CDATA #FIXED ''
+    idioma NMTOKEN #REQUIRED
+    usuerio NMTOKEN #REQUIRED>
+
+<!ELEMENT genero (titulo|video)+>
+<!ATTLIST genero
+    xmlns CDATA #FIXED ''
+    nombre CDATA #REQUIRED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ATTLIST titulo
+    xmlns CDATA #FIXED ''
+    duracion NMTOKEN #REQUIRED>
+
+<!ELEMENT video (#PCDATA)>
+<!ENTITY %lt; "<">

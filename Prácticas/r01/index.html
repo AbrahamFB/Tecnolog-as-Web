@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Formulario - R01</title>
+		<link href="estilo.css" rel="stylesheet">
+		<link href="confirma.html" rel="archives">
+		<link href="envia.php" rel="archives">
+	</head>
+
+	<body>
+
+		<form action="envia.php" method="post" class="formulario"> 
+			<label>Nombre: <span>*</span>
+				<input type="text" name="nombre" placeholder="Nombre" class="campo-form" required autocomplete="on">
+			</label>
+
+			<label>Apellidos: <span>*</span>
+				<input type="text" name="apellidos" placeholder="Apellidos" class="campo-form" required autocomplete="on">
+			</label>
+			
+		  <label>Teléfono
+				<input type="tel" name="telefono" placeholder="Número de Teléfono" class="campo-form">
+			</label>
+
+			<label>Email: <span>*</span>
+				<input type="email" name="email" placeholder="Email" class="campo-form" required autocomplete="on">
+			</label>
+			
+		  <label>Producto
+			<select name="producto" class="campo-form">
+					<option value="monitorSamsung">Monitor SAMSUNG</option> 
+					<option value="PCHuawei" selected>Laptop HUAWEI MateBook 13</option>
+					<option value="SamsungA7">Smartphone SAMSUNG A7 2018</option>
+			</select>
+		  </label>
+			
+			<label>Fecha de entrega: <span>*</span>
+				<input type="date" name="fecha" class="campo-form" required>
+			</label>
+				
+			<label>Comentario:
+				<textarea name="comentario" class="campo-form"></textarea>
+			</label>
+			<hr>
+			<label>Acepta Términos y Condiciones
+				<input checked type="checkbox" class="boton-tc">
+			</label>
+			<br>
+			<input type="submit" value="Enviar" class="boton-form">
+		</form>
+	</body>
+</html>

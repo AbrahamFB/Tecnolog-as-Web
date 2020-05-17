@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Registro de Usuarios</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ingresa tus datos a nuestro sistema</h1>
+    </header> 
+
+    <form action="registrar_usuario6.php" method="post"> 
+        <hr />
+        <label for="nombre">Nombre de Usuario:</label><br>
+        <input type="text" name="username" maxlength="32" required>
+        <br/><br/>
+
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" name="apellidos" maxlength="32" required>
+        <br/><br/>
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" name="direccion" maxlength="32" required>
+        <br/><br/>
+
+        <label for="ciudad">Ciudad:</label><br>
+        <input type="text" name="ciudad" maxlength="32" required>
+        <br/><br/>
+
+        <label for="cp">Código Postal:</label><br>
+        <input type="text" placeholder="Ejemplo: 72000" name="codigoPostal" minlength="5" maxlength="5" required>
+        <br/><br/>
+
+        <label for="cp">Clave Única:</label><br>
+        <input type="text" placeholder="Definida por el Usuario" name="clave" minlength="1" maxlength="22" required>
+
+
+        <br/><br/>
+        <input type="submit" name="submit" value="Enviar">
+        <input type="reset" name="clear" value="Borrar">
+    </form>
+
+    </body>
+</html>

@@ -1,0 +1,11 @@
+body{
+    background: url("https://image.freepik.com/vector-gratis/fondo-abstracto-azul-formas-geometricas_1035-17545.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 3%;
+    font-size: 19px;
+    color: mediumblue;
+}
+.perfil{
+    width:300px;
+}

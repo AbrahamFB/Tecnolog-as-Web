@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "catalogovod3.dtd">
+<CatalogoVOD>
+    <cuenta correo="afb16031999@gmail.com">
+        <perfiles>
+            <perfil usuario="Abraham" idioma="Español"/>
+            <perfil usuario="Gerardo" idioma="Alemán"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="México">
+            <genero nombre="Comedia">
+                <titulo duracion="1:30:02">Tonta tonta, pero no tanto</titulo>
+                <titulo duracion="1:21:30">Prometo no enamorarme</titulo>
+            </genero>
+            <genero nombre="Románticas">
+                <titulo duracion="2:14:01">A todos los chicos de los que me enamoré</titulo>
+                <titulo duracion="1:50:32">A todos los chicos de los que me enamoré: 2 PD Aún te quiero</titulo>
+            </genero>
+        </peliculas>
+        <programas region="Francia">
+            <genero nombre="Reflexión">
+                <titulo duracion="1:42:29">Octavo día</titulo>
+                <titulo duracion="2:37:12">La vida es bella</titulo>
+            </genero>
+            <genero nombre="Análisis personal">
+                <titulo duracion="1:39:23">Mi nombre es Hank</titulo>
+                <titulo duracion="2:12:11">Vete y Vive</titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

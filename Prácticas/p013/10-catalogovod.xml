@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="link.xsl"?>
+
+<CatalogoVOD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="10-catalogovod.xsd">
+    <cuenta correo="mark.zuckerberg@facebook.com" tipo="familiar" tdc="4772 1330 1233 7470">
+        <perfiles limite="4">
+            <perfil usuario="Abraham" idioma="espaniol">
+                <contenido clasificacion="B">
+                    <peliculas>
+                        <genero nombre="Infantil">
+                            <titulo duracion="01:03:00">Mi villano favorito</titulo>
+                            <titulo duracion="02:13:00">Bob Esponja</titulo>
+                        </genero>
+                        <genero nombre="Reflexión">
+                            <titulo duracion="01:50:00">Me llaman radio</titulo>
+                            <titulo duracion="01:01:00">Mi nombre es Khan</titulo>
+                        </genero>
+                    </peliculas>
+                    <programas>
+                        <genero nombre="Entretenimiento">
+                            <titulo temporada="1" capitulo="10">Mi pareja puede</titulo>
+                            <titulo temporada="1" capitulo="12">El socio</titulo>
+                        </genero>
+                        <genero nombre="comedia">
+                            <titulo temporada="2" capitulo="1">Impractical Jokers</titulo>
+                            <titulo temporada="11" capitulo="3">Malcom In The Middle</titulo>
+                        </genero>
+                    </programas>
+                </contenido>
+            </perfil>
+            <perfil usuario="Mark" idioma="english">
+                <contenido clasificacion="C">
+                    <peliculas>
+                        <genero nombre="Terror">
+                            <titulo duracion="02:03:00">World War Z</titulo>
+                            <titulo duracion="01:33:00">Chernobyl Diaries</titulo>
+                        </genero>
+                        <genero nombre="Science fiction">
+                            <titulo duracion="01:55:00">I, Robot</titulo>
+                            <titulo duracion="02:19:00">Ready Player One</titulo>
+                        </genero>
+                    </peliculas>
+                </contenido>
+            </perfil>
+            <perfil usuario="Priscilla" idioma="chinese">
+                <contenido clasificacion="B15">
+                    <programas>
+                        <genero nombre="Doramas">
+                            <titulo temporada="1" capitulo="11">The Secret Garden</titulo>
+                            <titulo temporada="1" capitulo="13">Goblin: The Great and Lonely
+                                God</titulo>
+                        </genero>
+                        <genero nombre="Comedy">
+                            <titulo temporada="9" capitulo="1">The Big Bang Theory</titulo>
+                            <titulo temporada="11" capitulo="3">Malcom In The Middle</titulo>
+                        </genero>
+                    </programas>
+                </contenido>
+            </perfil>
+            <perfil usuario="Kids" idioma="english">
+                <contenido clasificacion="A">
+                    <peliculas>
+                        <genero nombre="Animation">
+                            <titulo duracion="01:48:00">Big Hero 6</titulo>
+                            <titulo duracion="01:35:00">Toy Story 2</titulo>
+                        </genero>
+                        <genero nombre="Cartoons">
+                            <titulo duracion="01:33:00">Hercules</titulo>
+                            <titulo duracion="01:28:00">Mulan</titulo>
+                        </genero>
+                    </peliculas>
+                    <programas>
+                        <genero nombre="Cartoons">
+                            <titulo temporada="8" capitulo="3">The Bare Bears</titulo>
+                            <titulo temporada="5" capitulo="1">Teen Titans GO</titulo>
+                        </genero>
+                        <genero nombre="Comedy">
+                            <titulo temporada="2" capitulo="7">San &amp; Cat</titulo>
+                            <titulo temporada="1" capitulo="11">iCarly</titulo>
+                        </genero>
+                    </programas>
+                </contenido>
+            </perfil>
+        </perfiles>
+    </cuenta>
+</CatalogoVOD>

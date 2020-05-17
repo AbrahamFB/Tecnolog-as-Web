@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="spotify.xsd" version="1.0">
+     <Cuenta id="1" plan="free" fechaIni="2018-02-01" fechaFin="2018-03-01">
+          <Nombre></Nombre>
+          <Correo></Correo>
+          <Telefono tipo="movil"></Telefono>
+     </Cuenta>
+</Spotify>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="" visitas="" puntos="" >
+        <nombre></nombre>
+        <correo></correo>
+        <telefono tipo="casa"></telefono>
+        <telefono tipo="movil"></telefono>
+    </tarjeta>
+</cinefanatico>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Verificación Vehicular</title>
+</head>
+<body>
+    <p> 
+        <img src="carros.jpg" align="right">
+    </p>
+    <h1>Ingresa tu matrícula a validar:</h1>
+    
+    <form action="ejercicio6.php" method="post">
+        <p>Matricula: <input type="text" name="matri" required></p>
+        </p>
+        <p>Sexo:
+            <input type="radio" name="sexo" value="Masculino"> Masculino
+            <input type="radio" name="sexo" value="Femenino"> Femenino
+        </p>
+        <p><h4>Captcha</h4>
+            <img src="https://www.jose-aguilar.com/scripts/php/phpcaptcha/captcha.php"/>
+            <input type="text" name="captcha" id="captcha" maxlength="6" size="6"/>
+        </p>
+        <input value="Enviar" type="submit">
+        
+    </form>
+       
+</body>
+</html>

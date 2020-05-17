@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+	elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified"
+	xmlns:b="http://businesscard.org ">
+
+
+	<xsd:element name="Spotify" type="aplicationType"></xsd:element>
+	<xsd:element name="Cuenta" type="cuentaType"></xsd:element>
+	<xsd:element name="Nombre" type="xsd:string"></xsd:element>
+	<xsd:element name="Correo" type="xsd:string"></xsd:element>
+	<xsd:element name="Telefono" type="telefonoType"></xsd:element>
+
+	<xsd:attribute name="version" type="xsd:string"></xsd:attribute>
+	<xsd:attribute name="id" type="xsd:string"></xsd:attribute>
+	<xsd:attribute name="plan" type="xsd:string"></xsd:attribute>
+	<xsd:attribute name="fechaIni" type="xsd:string"></xsd:attribute>
+	<xsd:attribute name="fechaFin" type="xsd:string"></xsd:attribute>
+	<xsd:attribute name="tipo" type="xsd:string"></xsd:attribute>
+
+	<xsd:complexType name="aplicationType">
+		<xsd:sequence>
+			<xsd:element ref="Cuenta"/>
+		</xsd:sequence>
+		<xsd:attribute ref="version" use="required"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="cuentaType">
+		<xsd:sequence>
+			<xsd:element ref="Nombre"/>
+			<xsd:element ref="Correo"/>
+			<xsd:element ref="Telefono" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="id" use="required"></xsd:attribute>
+		<xsd:attribute ref="plan" use="required"></xsd:attribute>
+		<xsd:attribute ref="fechaIni" use="optional"></xsd:attribute>
+		<xsd:attribute ref="fechaFin" use="optional"></xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="telefonoType">
+		<xsd:attribute ref="tipo" use="required"></xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>
