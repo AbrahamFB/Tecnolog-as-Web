@@ -1,0 +1,163 @@
+{
+  "CatalogoVOD": {
+    "cuenta": {
+      "correo": "mark.zuckerberg@facebook.com",
+      "tipo": "familiar",
+      "tdc": "4772 1330 1233 7470",
+      "perfiles": {
+        "limite": "3",
+        "perfil": [
+          {
+            "usuario": "Mark",
+            "idioma": "english",
+            "contenido": {
+              "clasificacion": "C",
+              "peliculas": {
+                "genero": [
+                  {
+                    "nombre": "Terror",
+                    "titulo": [
+                      {
+                        "titulo": "World War Z",
+                        "duracion": "02:03:00"
+                      },
+                      {
+                        "titulo": "Chernobyl Diaries",
+                        "duracion": "01:33:00"
+                      }
+                    ]
+                  },
+                  {
+                    "nombre": "Science fiction",
+                    "titulo": [
+                      {
+                        "titulo": "I, Robot",
+                        "duracion": "01:55:00"
+                      },
+                      {
+                        "titulo": "Ready Player One",
+                        "duracion": "02:19:00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "usuario": "Priscilla",
+            "idioma": "chinese",
+            "contenido": {
+              "clasificacion": "B15",
+              "programas": {
+                "genero": [
+                  {
+                    "nombre": "Doramas",
+                    "titulo": [
+                      {
+                        "titulo": "The Secret Garden",
+                        "temporada": "1",
+                        "capitulo": "11"
+                      },
+                      {
+                        "titulo": "Goblin: The Great and Lonely God",
+                        "temporada": "1",
+                        "capitulo": "13"
+                      }
+                    ]
+                  },
+                  {
+                    "nombre": "Comedy",
+                    "titulo": [
+                      {
+                        "titulo": "The Big Bang Theory",
+                        "temporada": "9",
+                        "capitulo": "1"
+                      },
+                      {
+                        "titulo": "Malcom In The Middle",
+                        "temporada": "11",
+                        "capitulo": "3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "usuario": "Kids",
+            "idioma": "english",
+            "contenido": {
+              "clasificacion": "A",
+              "peliculas": {
+                "genero": [
+                  {
+                    "nombre": "Animation",
+                    "titulo": [
+                      {
+                        "titulo": "Big Hero 6",
+                        "duracion": "01:48:00"
+                      },
+                      {
+                        "titulo": "Toy Story 2",
+                        "duracion": "01:35:00"
+                      }
+                    ]
+                  },
+                  {
+                    "nombre": "Cartoons",
+                    "titulo": [
+                      {
+                        "titulo": "Hercules",
+                        "duracion": "01:33:00"
+                      },
+                      {
+                        "titulo": "Mulan",
+                        "duracion": "01:28:00"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "programas": {
+                "genero": [
+                  {
+                    "nombre": "Cartoons",
+                    "titulo": [
+                      {
+                        "titulo": "The Bare Bears",
+                        "temporada": "8",
+                        "capitulo": "3"
+                      },
+                      {
+                        "titulo": "Teen Titans GO",
+                        "temporada": "5",
+                        "capitulo": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "nombre": "Comedy",
+                    "titulo": [
+                      {
+                        "titulo": "San & Cat",
+                        "temporada": "2",
+                        "capitulo": "7"
+                      },
+                      {
+                        "titulo": "iCarly",
+                        "temporada": "1",
+                        "capitulo": "11"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Procesamiento de JSON</title>
+        <script type="text/javascript">
+        var reader = new FileReader();
+
+        function readFileAsString(files) {
+            if (files.length === 0) {
+                console.log('No se ha ingresao algún archivo!!');
+                return;
+            }
+
+            reader.readAsText(files[0]);
+            //reader.onload;
+            reader.onload = function (event) {
+                console.log('...Carga completada');
+                //console.log('File content:', event.target.result);
+            };
+        }
+
+        function parseJSON() {
+
+            /// SE MUESTRA EL string DEL ARCHIVO CARGADO
+            console.log('JSON string:', reader.result);
+            /// SE TRANSFORMA DE string A objeto literal
+            var jsonobj = eval('(' + reader.result + ')');
+            /// SE MUESTRA EL CONTENIDO DEL objecto
+            console.log('JSON objcet:', jsonobj);
+            /// SE USA EL objeto PARA EXTRAER INFORMACIÓN
+            //alert(jsonobj.CatalogoVOD.cuenta.correo);
+
+            alert("DATOS DEL CLIENTE\nCorreo: " + jsonobj.CatalogoVOD.cuenta.correo + "\nTipo: " + jsonobj.CatalogoVOD.cuenta.tipo + "\nTarjeta de Crédito: " + jsonobj.CatalogoVOD.cuenta.tdc);
+           
+            var nombre = prompt("¿Cuál es tu nombre?", "");
+            var num = 0;
+            var limitUser = jsonobj.CatalogoVOD.cuenta.perfiles.limite;
+            var limit = jsonobj.CatalogoVOD.cuenta.perfiles.limite;
+            //Detectamos si el usuario ingreso un nombre
+            if (nombre != null) {
+                //alert("Tu Nombre es: " + nombre); 
+
+                for (num = 0; num <= limit; num++) {
+                    if (nombre === jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].usuario) {
+                        var contenid = prompt("Nombre: " + nombre + "\nIdioma: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].idioma + "\nIngresa que deseas ver\nPeliculas\nProgramas", "");
+                        if (contenid === ("peliculas" || "Peliculas")) {
+                            alert("Peliculas");
+
+                            var generoNum = 0;
+                            var limit1 = 0;
+                            while (limit1 <= limit) {
+                                alert("Clasificacion : " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.clasificacion);
+                                alert("Género: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.peliculas.genero[generoNum].nombre);
+                                var tituloNum = 0;
+                                alert("Título: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.peliculas.genero[generoNum].titulo[tituloNum].titulo);
+                                alert("Duración: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.peliculas.genero[generoNum].titulo[tituloNum].duracion);
+                                tituloNum++;
+                                alert("Título: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.peliculas.genero[generoNum].titulo[tituloNum].titulo);
+                                alert("Duración: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.peliculas.genero[generoNum].titulo[tituloNum].duracion);
+                                generoNum++;
+                                limit1++;
+                            }
+                        }
+                        else {
+                            if (contenid === ("programas" || "Programas")) {
+                                alert("Programas");
+
+                                var generoNum = 0;
+                                var limit1 = 0;
+                                while (limit1 <= limit) {
+                                    alert("Clasificacion : " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.clasificacion);
+
+                                    alert("Género: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].nombre);
+
+                                    var tituloNum = 0;
+                                    alert("Título: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].titulo[tituloNum].titulo);
+                                    alert("Temporada: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].titulo[tituloNum].temporada);
+                                    alert("Capitulo: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].titulo[tituloNum].capitulo);
+                                    tituloNum++;
+
+                                    alert("Título: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].titulo[tituloNum].titulo);
+                                    alert("Temporada: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].titulo[tituloNum].temporada);
+                                    alert("Capitulo: " + jsonobj.CatalogoVOD.cuenta.perfiles.perfil[num].contenido.programas.genero[generoNum].titulo[tituloNum].capitulo);
+                                    generoNum++;
+                                    limit1++;
+                                }
+                            }
+                            else {
+                                alert("No válido");
+                            }
+
+                        }
+                        num++;
+                    }
+                }
+
+            }
+            //Detectamos si el usuario NO ingreso un nombre
+            else {
+                alert("No has ingresado tu nombre");
+            }           
+        }
+
+    </script>
+    </head>
+
+    <body background="fondo.jpg">
+        <h1>Ingresa un JSON</h2>
+        <form>
+            <input type="file" id="upload"
+                onchange="readFileAsString(this.files)">
+            <br><br>
+            <input id="clickMe" type="button" value="Procesar"
+                onclick="parseJSON();">
+        </form>
+    </body>
+
+</html>

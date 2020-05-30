@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesamiento de JSON</title>
+    <script type="text/javascript">
+        var reader = new FileReader();
+
+        function readFileAsString(files) {
+            if (files.length === 0) {
+                console.log('No se ha seleccionado algún archivo!!');
+                return;
+            }
+
+            reader.readAsText(files[0]);
+            //reader.onload;
+            reader.onload = function(event) {
+                console.log('...Carga completada');
+                //console.log('File content:', event.target.result);
+            };
+        }
+
+        function parseJSON() {
+            /// SE MUESTRA EL string DEL ARCHIVO CARGADO
+            console.log('JSON string:', reader.result);
+            /// SE TRANSFORMA DE string A objeto literal
+            var jsonobj = eval('(' + reader.result + ')');
+            /// SE MUESTRA EL CONTENIDO DEL objecto
+            console.log('JSON objcet:', jsonobj);
+            /// SE USA EL objeto PARA EXTRAER INFORMACIÓN
+            //alert(jsonobj.CatalogoVOD.cuenta.correo);
+        }
+    </script>
+</head>
+<body>
+    <h2>Selecciona un archivo .json</h2>
+    <form>
+        <input type="file" id="upload" onchange="readFileAsString(this.files)">
+        <br><br>
+        <input id="clickMe" type="button" value="Procesar" onclick="parseJSON();">
+    </form>
+</body>
+</html>
