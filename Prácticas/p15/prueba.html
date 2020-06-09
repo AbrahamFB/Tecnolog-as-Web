@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Práctica I - AJAX </title>
+</head>
+<script type="text/javascript">
+
+    function getXMLHttpRequestOBJ() {
+        var xhttp = null;
+        try {//prueba para los navegadores : Mozilla, Opera...
+            xhttp = new XMLHttpRequest();
+        }
+        catch (e) {
+            try {//prueba para los navegadores Internet Explorer > 5.0
+                xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                try {//prueba para el navegador Internet Explorer 5.0
+                    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e) {
+                    xhttp = null;
+                }
+            }
+        }
+        return xhttp;
+    }
+
+
+    // var xhttp;
+    // if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+    //     xhttp = new XMLHttpRequest();
+    // } else if (window.ActiveXObject) { // IE
+    //     try {
+    //         xhttp = new ActiveXObject('Msxml2.XMLHTTP');
+    //     }
+    //     catch (e) {
+    //         try {
+    //             xhttp = new ActiveXObject('Microsoft.XMLHTTP');
+    //         }
+    //         catch (e) { }
+    //     }
+    // }
+
+
+    var r = getXMLHttpRequestOBJ();
+
+    function loadDoc(opc) {
+        //  var xhttp = new XMLHttpRequest();
+
+        r.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                switch (opc) {
+                    case 1: document.getElementById("demo1").innerHTML =
+                        "<p>He AQUI el Primer NUEVO contenido</p>";
+                        break;
+                    case 2: document.getElementById("demo2").innerHTML =
+                        "<p>He AQUI el Segundo NUEVO contenido --> " +
+                        document.forms[0]["nombre"].value + "</p>";
+                        break;
+                }
+            }
+        };
+        r.open("GET", " ", true);
+        r.send(null);
+    }
+</script>
+
+<body>
+    <h3>Ejemplo 1 del uso del Objeto XMLHttpRequest</h3>
+    <button type="button" onclick="loadDoc(1)">Resultado</button>
+    <div id="demo1">
+        <p>Mi informacion cambiará sin recargar la página completa...</p>
+    </div>
+    <h3>Ejemplo 2 del uso del Objeto XMLHttpRequest</h3>
+    <form>
+        <label>Entrada: </label><input type="text" name="nombre" />
+        <button type="button" onclick="loadDoc(2)">Resultado</button>
+    </form>
+    <div id="demo2">
+        <p>Mi informacion cambiará sin recargar la página completa...</p>
+    </div>
+
+</body>
+
+</html>
